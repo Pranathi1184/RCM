@@ -55,20 +55,25 @@ services:
       retries: 5
 
   ai-service:
-    image: python:3.11-alpine
+    build:
+      context: ./ai-service
+      dockerfile: Dockerfile
     container_name: regulatory_ai
-    command: python -m http.server 5000
     restart: always
     ports:
       - "5000:5000"
+    env_file:
+      - .env
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/health"]
       interval: 15s
       timeout: 5s
       retries: 3
 
   frontend:
-    image: nginx:alpine
+    build:
+      context: ./RCM/FRONTEND
+      dockerfile: Dockerfile
     container_name: regulatory_frontend
     restart: always
     ports:

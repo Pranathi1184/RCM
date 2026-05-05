@@ -80,7 +80,7 @@ class AuthControllerTest {
 
     @Test
     void testRegister_Success() throws Exception {
-        RegisterRequest request = new RegisterRequest("new@example.com", "pass123");
+        RegisterRequest request = new RegisterRequest("new@example.com", "pass123", "VIEWER");
         User mockUser = User.builder().email("new@example.com").role(Role.VIEWER).build();
 
         when(userRepository.existsByEmail(anyString())).thenReturn(false);
