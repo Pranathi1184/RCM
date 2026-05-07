@@ -68,9 +68,13 @@ export default function Login() {
 
         <div className="mt-8 pt-6 border-t border-gray-100 text-center">
           <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">Demo Credentials</p>
-          <div className="mt-2 text-sm text-gray-600">
-            admin@example.com / admin123
-          </div>
+          <button 
+            type="button"
+            onClick={() => setForm({ email: "admin@example.com", password: "admin123" })}
+            className="mt-2 text-sm text-[#1B4F8A] hover:underline block w-full"
+          >
+            admin@example.com / admin123 (Auto-fill)
+          </button>
         </div>
       </div>
     </div>

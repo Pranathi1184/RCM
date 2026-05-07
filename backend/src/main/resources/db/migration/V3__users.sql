@@ -9,6 +9,6 @@ CREATE TABLE users (
 -- Seed an initial admin user (password is 'admin123' hashed with BCrypt)
 INSERT INTO users (email, password, role) 
 VALUES 
-('admin@example.com', '$2a$10$XnJ1Q92a1X98pP1Yn5tNjeaWj/G5iM60s5YtW2j8B8S08A7C6Jd8K', 'ADMIN'),
-('manager@example.com', '$2a$10$XnJ1Q92a1X98pP1Yn5tNjeaWj/G5iM60s5YtW2j8B8S08A7C6Jd8K', 'MANAGER'),
-('viewer@example.com', '$2a$10$XnJ1Q92a1X98pP1Yn5tNjeaWj/G5iM60s5YtW2j8B8S08A7C6Jd8K', 'VIEWER');
+('admin@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'ADMIN'),
+('manager@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'MANAGER'),
+('viewer@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'VIEWER');
