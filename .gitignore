@@ -1,0 +1,23 @@
+# Secrets
+.env
+
+# Java build output
+target/
+
+# Node / React
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# ChromaDB vector data
+chroma_data/
+
+# IDE files (optional but recommended)
+.idea/
+*.iml
+.vscode/
+
+# Project Documentation
+PROJECT_SUMMARY.md

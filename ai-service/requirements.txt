@@ -1,0 +1,9 @@
+flask
+requests
+python-dotenv
+chromadb
+sentence-transformers
+numpy
+pysqlite3-binary
+pypdf
+flask-limiter

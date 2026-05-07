@@ -1,0 +1,6 @@
+2026-04-30 15:03:08,702 - WARNING - Request received without JSON format
+2026-04-30 15:04:02,466 - WARNING - Request received without JSON format
+2026-04-30 15:07:02,183 - INFO - Received input: hello
+2026-04-30 15:07:02,185 - INFO - Processed result: HELLO
+2026-04-30 15:42:28,800 - INFO - Received input: hello
+2026-04-30 15:42:28,804 - INFO - Processed result: HELLO
