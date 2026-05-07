@@ -4,6 +4,6 @@ python-dotenv
 chromadb
 sentence-transformers
 numpy
-pysqlite3-binary
+pysqlite3
 pypdf
 flask-limiter
