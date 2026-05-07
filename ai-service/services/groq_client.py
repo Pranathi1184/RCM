@@ -46,14 +46,16 @@ class GroqClient:
                     return {
                         "content": data["choices"][0]["message"]["content"],
                         "tokens": data.get("usage", {}).get("total_tokens", 0),
-                        "model": data.get("model", "llama-3.3-70b-versatile")
+                        "model": data.get("model", "llama-3.3-70b-versatile"),
+                        "is_fallback": False
                     }
 
                 logging.warning("Unexpected response format")
                 return {
-                    "content": "Fallback: Unexpected response",
+                    "content": "Our AI is currently refining its thoughts. Please try again in a moment.",
                     "tokens": 0,
-                    "model": "unknown"
+                    "model": "unknown",
+                    "is_fallback": True
                 }
 
             except requests.exceptions.Timeout:
@@ -65,7 +67,8 @@ class GroqClient:
             time.sleep(2 ** attempt)
 
         return {
-            "content": "Fallback: AI service unavailable",
+            "content": "The regulatory assistant is taking a short break. Here is a standard template for now: This change requires careful review of compliance standards.",
             "tokens": 0,
-            "model": "unknown"
+            "model": "unknown",
+            "is_fallback": True
         }

@@ -1,8 +1,0 @@
-from services.chroma_client import query_documents
-
-context = query_documents(text)
-
-return jsonify({
-    "summary": "AI summary using context",
-    "context": context
-})

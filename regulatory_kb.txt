@@ -1,0 +1,26 @@
+# Global Regulatory Compliance Knowledge Base (2026)
+
+## 1. Overview of Regulatory Bodies
+- **SEC (Securities and Exchange Commission)**: Responsible for protecting investors and maintaining fair, orderly, and efficient markets in the United States.
+- **FINRA (Financial Industry Regulatory Authority)**: A government-authorized not-for-profit organization that oversees U.S. broker-dealers.
+- **GDPR (General Data Protection Regulation)**: A regulation in EU law on data protection and privacy in the European Union and the European Economic Area.
+- **RBI (Reserve Bank of India)**: India's central bank and regulatory body responsible for regulation of the Indian banking system.
+- **FCA (Financial Conduct Authority)**: A financial regulatory body in the United Kingdom, but operates independently of the UK Government.
+
+## 2. Priority Levels for Regulatory Changes
+- **P1 (Critical)**: Immediate action required. Potential for high fines or operational shutdown. Deadline usually within 30 days.
+- **P2 (High)**: Action required within 60-90 days. Significant impact on internal processes.
+- **P3 (Medium)**: Moderate impact. Action required within 6 months.
+- **P4 (Low)**: Minor updates or administrative changes.
+
+## 3. Data Privacy Standards (2026 Update)
+New regulations require all financial institutions to implement AI-driven monitoring of data access logs. Consent for data processing must be renewed every 24 months. Cross-border data transfers to non-equivalent jurisdictions require a specific "Impact Assessment Report".
+
+## 4. Reporting Requirements
+All major regulatory changes must be documented with:
+- **Impact Score**: A scale from 1.0 to 10.0 indicating the level of effort and risk.
+- **Assigned Compliance Officer**: The person responsible for implementation.
+- **Audit Trail**: Every modification to the record must be logged with the user's ID and timestamp.
+
+## 5. ESG (Environmental, Social, and Governance) Reporting
+Starting Q3 2026, firms must report their carbon footprint and board diversity statistics under the new "Global Sustainability Framework".

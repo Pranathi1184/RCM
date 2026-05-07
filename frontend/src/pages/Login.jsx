@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import api from "../services/api";
+
+export default function Login() {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await api.post("/auth/login", form);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("role", data.role);
+      navigate("/dashboard");
+    } catch {
+      setError("Invalid credentials");
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 font-sans">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-xl p-8 border-t-4 border-[#1B4F8A]">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-[#1B4F8A]">Regulatory Tool</h1>
+          <p className="text-gray-500 mt-2">Sign in to manage changes</p>
+        </div>
+        
+        {error && (
+          <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+            <p className="text-sm text-red-700">{error}</p>
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+            <input 
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1B4F8A] focus:border-transparent outline-none transition-all" 
+              placeholder="admin@example.com" 
+              type="email"
+              required
+              value={form.email}
+              onChange={e => setForm({ ...form, email: e.target.value })} 
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+            <input 
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1B4F8A] focus:border-transparent outline-none transition-all" 
+              type="password" 
+              placeholder="••••••••" 
+              required
+              value={form.password}
+              onChange={e => setForm({ ...form, password: e.target.value })} 
+            />
+          </div>
+
+          <button 
+            type="submit" 
+            className="w-full py-3 px-4 bg-[#1B4F8A] text-white font-bold rounded-md hover:bg-[#153d6b] transform active:scale-[0.98] transition-all shadow-md min-h-[44px]"
+          >
+            Sign In
+          </button>
+        </form>
+
+        <div className="mt-8 pt-6 border-t border-gray-100 text-center">
+          <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">Demo Credentials</p>
+          <div className="mt-2 text-sm text-gray-600">
+            admin@example.com / admin123
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

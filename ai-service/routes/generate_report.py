@@ -5,6 +5,13 @@ import uuid
 import time
 import re
 import json
+import os
+
+def load_prompt(filename, **kwargs):
+    path = os.path.join("ai-service", "prompts", filename)
+    with open(path, "r") as f:
+        template = f.read()
+    return template.format(**kwargs)
 
 fallback_report = {
     "title": "Report Unavailable",
@@ -35,56 +42,23 @@ def clean_ai_json(raw_text):
 
 def process_report(job_id, text):
     try:
-        prompt = f"""
-You are an AI report generator.
-
-Generate a structured report.
-
-Return JSON:
-{{
-  "title": "...",
-  "executive_summary": "...",
-  "overview": "...",
-  "top_items": ["...", "..."],
-  "recommendations": ["...", "..."]
-}}
-
-Text:
-\"\"\"{text}\"\"\"
-"""
+        prompt = load_prompt("generate_report.txt", text=text)
 
         result = groq.generate(prompt)
 
         raw_output = result["content"]
 
-        #  CLEAN RESPONSE
+        # CLEAN RESPONSE
         parsed_output = clean_ai_json(raw_output)
 
-        #  UPDATE JOB
+        # UPDATE JOB
         jobs[job_id]["status"] = "completed"
         jobs[job_id]["result"] = parsed_output
-        if not isinstance(parsed_output, dict) or "title" not in parsed_output:
-            jobs[job_id]["is_fallback"] = True
-        else:
-            jobs[job_id]["is_fallback"] = False
-
-        # OPTIONAL WEBHOOK (send clean data)
-        try:
-            import requests
-
-            requests.post(
-                "http://example.com/webhook",
-                json={
-                    "job_id": job_id,
-                    "status": "completed",
-                    "result": parsed_output,
-                    "is_fallback": jobs[job_id]["is_fallback"]
-                },
-                timeout=3
-            )
-
-        except Exception as webhook_error:
-            print("Webhook failed:", webhook_error)
+        jobs[job_id]["is_fallback"] = result.get("is_fallback", False) or (parsed_output == fallback_report)
+        jobs[job_id]["meta"] = {
+            "model_used": result.get("model", "unknown"),
+            "tokens_used": result.get("tokens", 0)
+        }
 
     except Exception:
         jobs[job_id]["status"] = "completed"

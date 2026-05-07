@@ -22,9 +22,47 @@ import org.apache.commons.csv.CSVPrinter;
 public class RegulatoryChangeService {
 
     private final RegulatoryChangeRepository repository;
+    private final AiServiceClient aiServiceClient;
 
-    public RegulatoryChangeService(RegulatoryChangeRepository repository) {
+    public RegulatoryChangeService(RegulatoryChangeRepository repository, AiServiceClient aiServiceClient) {
         this.repository = repository;
+        this.aiServiceClient = aiServiceClient;
+    }
+
+    public RegulatoryChange generateAiInsights(Long id) {
+        RegulatoryChange change = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Regulatory Change not found with id: " + id));
+
+        String content = change.getTitle() + " " + change.getDescription();
+        
+        AiServiceClient.AiResponse descRes = aiServiceClient.describe(content);
+        if (descRes != null && descRes.getData() != null && descRes.getData().get("data") instanceof Map dataMap) {
+            change.setAiDescription((String) dataMap.get("description"));
+        }
+
+        AiServiceClient.AiResponse recRes = aiServiceClient.recommend(content);
+        if (recRes != null && recRes.getData() != null && recRes.getData().get("data") instanceof List recommendations) {
+            // Convert list to a formatted string
+            StringBuilder sb = new StringBuilder();
+            for (Object rec : recommendations) {
+                if (rec instanceof String) {
+                    sb.append("- ").append(rec).append("\n");
+                } else if (rec instanceof Map recMap) {
+                    sb.append("- ").append(recMap.get("description")).append(" (").append(recMap.get("priority")).append(")\n");
+                }
+            }
+            change.setAiRecommendations(sb.toString().trim());
+        }
+
+        return repository.save(change);
+    }
+
+    public Map<String, Object> queryRag(String question) {
+        AiServiceClient.AiResponse response = aiServiceClient.query(question);
+        if (response != null && response.getData() != null && response.getData().get("data") instanceof Map dataMap) {
+            return (Map<String, Object>) dataMap;
+        }
+        return new HashMap<>();
     }
 
     public RegulatoryChange createChange(RegulatoryChange newChange) {
@@ -104,6 +142,8 @@ public class RegulatoryChangeService {
 
     @Transactional(readOnly = true)
     public byte[] exportToCsv() {
+        // Use JOIN FETCH or a custom query if needed to avoid N+1 for any relationships
+        // but here RegulatoryChange has only simple fields and Enums
         Page<RegulatoryChange> allActive = repository.findAllByIsDeletedFalse(Pageable.unpaged());
         List<RegulatoryChange> changes = allActive.getContent();
 

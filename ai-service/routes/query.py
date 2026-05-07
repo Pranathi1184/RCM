@@ -5,6 +5,14 @@ import time
 from routes.health import response_times
 from services.cache_service import get_cache, set_cache
 
+import os
+
+def load_prompt(filename, **kwargs):
+    path = os.path.join("ai-service", "prompts", filename)
+    with open(path, "r") as f:
+        template = f.read()
+    return template.format(**kwargs)
+
 fallback_query = {
     "answer": "Unable to generate answer at the moment. Please try again later.",
     "sources": []
@@ -61,31 +69,11 @@ def query():
         context = "\n\n".join(docs)
 
         # Step 3: Prompt
-        prompt = f"""
-You are an AI assistant.
-
-Use ONLY the context below to answer the question.
-
-Rules:
-- Do NOT use outside knowledge
-- If answer is clearly supported by context, use it
-- If partially supported, give best possible answer based on context
-- If not supported at all, say:
-  "Answer not available in provided context"
-- Be concise and clear
-
-Context:
-{context}
-
-Question:
-{question}
-"""
+        prompt = load_prompt("query.txt", context=context, question=question)
 
         # Step 4: Call Groq + track time
         start = time.time()
-
         ai_result = groq.generate(prompt)
-
         end = time.time()
 
         response_time_ms = int((end - start) * 1000)
@@ -115,7 +103,7 @@ Question:
                 "tokens_used": tokens_used,
                 "response_time_ms": response_time_ms,
                 "cached": False,
-                "is_fallback": False
+                "is_fallback": ai_result.get("is_fallback", False)
             }
         })
 

@@ -17,19 +17,25 @@ def generate_key(text):
 def get_cache(question):
     global cache_hits, cache_misses
 
-    key = generate_key(question)
-    data = r.get(key)
+    try:
+        key = generate_key(question)
+        data = r.get(key)
 
-    if data:
-        cache_hits += 1
-        return json.loads(data)
+        if data:
+            cache_hits += 1
+            return json.loads(data)
+    except Exception as e:
+        print(f"Redis get error: {e}")
 
     cache_misses += 1
     return None
 
 def set_cache(question, response):
-    key = generate_key(question)
-    r.setex(key, TTL, json.dumps(response))
+    try:
+        key = generate_key(question)
+        r.setex(key, TTL, json.dumps(response))
+    except Exception as e:
+        print(f"Redis set error: {e}")
 
 def get_cache_stats():
     return {

@@ -1,8 +1,9 @@
 flask
 requests
 python-dotenv
-chromadb==0.4.24
+chromadb
 sentence-transformers
-numpy<2
-pysqlite3
+numpy
+pysqlite3-binary
 pypdf
+flask-limiter

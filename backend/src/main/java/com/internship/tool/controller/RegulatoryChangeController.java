@@ -39,6 +39,18 @@ public class RegulatoryChangeController {
         return ResponseEntity.ok(service.updateChange(id, updateData));
     }
 
+    @PreAuthorize("hasAnyRole('MANAGER', 'ADMIN')")
+    @PostMapping("/{id}/ai-insights")
+    public ResponseEntity<RegulatoryChange> generateAiInsights(@PathVariable Long id) {
+        return ResponseEntity.ok(service.generateAiInsights(id));
+    }
+
+    @PreAuthorize("hasAnyRole('VIEWER', 'MANAGER', 'ADMIN')")
+    @GetMapping("/query")
+    public ResponseEntity<Map<String, Object>> queryRag(@RequestParam String q) {
+        return ResponseEntity.ok(service.queryRag(q));
+    }
+
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> softDeleteChange(@PathVariable Long id) {

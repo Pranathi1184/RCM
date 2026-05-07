@@ -1,9 +1,0 @@
-@app.route("/batch-process", methods=["POST"])
-def batch():
-    items = request.json.get("items", [])
-
-    results = []
-    for item in items:
-        results.append({"input": item, "output": "processed"})
-
-    return {"results": results}

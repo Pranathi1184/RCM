@@ -1,9 +1,0 @@
-def query_documents(query):
-    query_embedding = model.encode([query])[0]
-
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=3
-    )
-
-    return results["documents"]

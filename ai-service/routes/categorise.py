@@ -5,6 +5,14 @@ import re
 import time
 from services.cache_service import get_cache, set_cache
 
+import os
+
+def load_prompt(filename, **kwargs):
+    path = os.path.join("ai-service", "prompts", filename)
+    with open(path, "r") as f:
+        template = f.read()
+    return template.format(**kwargs)
+
 fallback_categorise = {
     "category": "Operational",
     "confidence": 0.5,
@@ -30,10 +38,10 @@ def categorise():
     if len(user_text) < 5:
         return jsonify({"error": "Text too short"}), 400
 
-    if len(user_text) > 1000:
+    if len(user_text) > 2000:
         return jsonify({"error": "Text too long"}), 400
 
-    # CACHE CHECK (ADD HERE)
+    # CACHE CHECK
     key = user_text.lower().strip()
     cached = get_cache(key)
     if cached:
@@ -49,46 +57,12 @@ def categorise():
             }
         })
     
-    prompt = f"""
-You are a strict classification AI.
-
-Classify the text into EXACTLY one category:
-Compliance, Risk, Legal, Financial, Operational
-
-Rules:
-- Output ONLY valid JSON
-- DO NOT include markdown
-- DO NOT add any text outside JSON
-- Confidence must be between 0 and 1
-
-Decision rules:
-- Regulatory rules, penalties, enforcement → Compliance
-- Laws, court cases, legal disputes → Legal
-- Financial reports, audits, accounting → Financial
-- Risk assessment, mitigation → Risk
-- Internal processes, workflows → Operational
-
-Always choose the MOST relevant category.
-
-
-Text:
-\"\"\"{user_text}\"\"\"
-
-Output:
-{{
-  "category": "...",
-  "confidence": 0.0,
-  "reasoning": "..."
-}}
-"""
+    prompt = load_prompt("categorise.txt", text=user_text)
 
     try:
         start = time.time()
-
         ai_result = client.generate(prompt)
-
         end = time.time()
-
         response_time_ms = int((end - start) * 1000)
 
         raw_text = ai_result["content"]
@@ -97,7 +71,6 @@ Output:
 
         # Clean markdown
         cleaned = raw_text.replace("```json", "").replace("```", "").strip()
-
         match = re.search(r"\{.*\}", cleaned, re.DOTALL)
 
         if not match:
@@ -105,7 +78,7 @@ Output:
 
         parsed = json.loads(match.group())
         
-        #  SAVE TO CACHE
+        # SAVE TO CACHE
         set_cache(key, parsed)
 
         return jsonify({
@@ -120,20 +93,7 @@ Output:
             }
         })
 
-    except json.JSONDecodeError:
-        return jsonify({
-            "data": fallback_categorise,
-            "meta": {
-                "confidence": 0.5,
-                "model_used": "fallback",
-                "tokens_used": 0,
-                "response_time_ms": 0,
-                "cached": False,
-                "is_fallback": True
-            }
-        })
-        
-    except Exception as e:
+    except Exception:
         return jsonify({
             "data": fallback_categorise,
             "meta": {
