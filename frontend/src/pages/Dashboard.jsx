@@ -30,8 +30,8 @@ export default function Dashboard() {
     if (!query.trim()) return;
     setLoading(true);
     try {
-      const { data } = await api.get(`/changes/query?q=${encodeURIComponent(query)}`);
-      setQueryResult(data);
+      const { data } = await aiApi.post("/query",{question:query});
+      setQueryResult(data.data);
     } catch (err) {
       alert("Search failed: " + (err.response?.data?.error || err.message));
     } finally {
