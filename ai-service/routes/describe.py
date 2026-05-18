@@ -9,7 +9,8 @@ describe_bp = Blueprint("describe", __name__)
 client = GroqClient()
 
 def load_prompt(filename, **kwargs):
-    path = os.path.join("ai-service", "prompts", filename)
+    prompts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "prompts"))
+    path = os.path.join(prompts_dir, filename)
     with open(path, "r") as f:
         template = f.read()
     return template.format(**kwargs)

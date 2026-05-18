@@ -29,6 +29,10 @@ public class RegulatoryChangeService {
         this.aiServiceClient = aiServiceClient;
     }
 
+    public RegulatoryChange getChangeById(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
     public RegulatoryChange generateAiInsights(Long id) {
         RegulatoryChange change = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Regulatory Change not found with id: " + id));
@@ -95,7 +99,11 @@ public class RegulatoryChangeService {
             existing.setDeadline(updateData.getDeadline());
         if (updateData.getAssignedTo() != null)
             existing.setAssignedTo(updateData.getAssignedTo());
-
+        
+        if (updateData.getAiDescription() != null)
+            existing.setAiDescription(updateData.getAiDescription());
+        if (updateData.getAiRecommendations() != null)
+            existing.setAiRecommendations(updateData.getAiRecommendations());
         return repository.save(existing);
     }
 

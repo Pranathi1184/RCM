@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 export default function Detail() {
@@ -8,17 +8,17 @@ export default function Detail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    api.get(`/changes/${id}`).then(({ data }) => setChange(data));
+    api.get(`/api/changes/${id}`).then(({ data }) => setChange(data));
   }, [id]);
 
   const handleDelete = async () => {
-    await api.delete(`/changes/${id}`);
-    navigate("/changes");
+    await api.delete(`/api/changes/${id}`);
+    navigate("/api/changes");
   };
 
   const generateAiInsights = async () => {
     try {
-      const { data } = await api.post(`/changes/${id}/ai-insights`);
+      const { data } = await api.post(`/api/changes/${id}/ai-insights`);
       setChange(data);
     } catch (err) {
       alert("Error generating insights: " + (err.response?.data?.error || err.message));
@@ -36,7 +36,7 @@ export default function Detail() {
         </div>
         <div className="space-x-2">
           <button onClick={generateAiInsights} className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700">AI Insights</button>
-          <Link to={`/changes/${id}/edit`} className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700">Edit</Link>
+          <button onClick={() => navigate(`/changes/${id}/edit`)} className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700">Edit</button>
           <button onClick={handleDelete} className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
         </div>
       </div>

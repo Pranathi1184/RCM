@@ -8,7 +8,8 @@ from services.cache_service import get_cache, set_cache
 import os
 
 def load_prompt(filename, **kwargs):
-    path = os.path.join("ai-service", "prompts", filename)
+    prompts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "prompts"))
+    path = os.path.join(prompts_dir, filename)
     with open(path, "r") as f:
         template = f.read()
     return template.format(**kwargs)
@@ -61,6 +62,7 @@ def query():
         # Step 1: Retrieve documents
         results = chroma.query(question, n_results=3)
         docs = results.get("documents", [[]])[0]
+        metas = results.get("metadatas", [[]])[0]
 
         if not docs:
             raise Exception("No relevant documents")
@@ -87,10 +89,18 @@ def query():
         tokens_used = ai_result["tokens"]
         model_used = ai_result["model"]
 
+        # Format sources with their origin filenames
+        sources = []
+        for doc, meta in zip(docs, metas):
+            sources.append({
+                "content": doc,
+                "file": meta.get("source", "Unknown")
+            })
+
         # STEP 5 — SAVE TO CACHE
         result = {
             "answer": answer,
-            "sources": docs
+            "sources": sources
         }
 
         set_cache(key, result)

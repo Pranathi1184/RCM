@@ -1,0 +1,471 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\ingest_docs.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\ingest_docs.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\query.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\routes\\query.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\regulatory_kb.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:regulatory_kb.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\internal_policies.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:internal_policies.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\services\\aiApi.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\services\\aiApi.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Detail.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\Detail.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\List.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\List.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\EditRegulatoryChangeForm.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\EditRegulatoryChangeForm.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Form.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\Form.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\Tool-13_Regulatory_Change_Management.pdf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tool-13_Regulatory_Change_Management.pdf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\java\\com\\internship\\tool\\controller\\RegulatoryChangeController.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\src\\main\\java\\com\\internship\\tool\\controller\\RegulatoryChangeController.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\components\\Layout.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\components\\Layout.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Dashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\Dashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\Login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\resources\\application.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\src\\main\\resources\\application.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\resources\\db\\migration\\V3__users.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\src\\main\\resources\\db\\migration\\V3__users.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\generate_report.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\routes\\generate_report.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\prompts\\generate_report.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\prompts\\generate_report.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\categorise.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\routes\\categorise.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\prompts\\categorise.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ai-service\\prompts\\categorise.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "query.py",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\query.py",
+              "RelativeDocumentMoniker": "ai-service\\routes\\query.py",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\query.py",
+              "RelativeToolTip": "ai-service\\routes\\query.py",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-05-09T20:49:34.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.py",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\app.py",
+              "RelativeDocumentMoniker": "ai-service\\app.py",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\app.py",
+              "RelativeToolTip": "ai-service\\app.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-05-09T20:35:15.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "internal_policies.txt",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\internal_policies.txt",
+              "RelativeDocumentMoniker": "internal_policies.txt",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\internal_policies.txt",
+              "RelativeToolTip": "internal_policies.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-09T15:19:02.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ingest_docs.py",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\ingest_docs.py",
+              "RelativeDocumentMoniker": "ai-service\\ingest_docs.py",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\ingest_docs.py",
+              "RelativeToolTip": "ai-service\\ingest_docs.py",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-05-09T15:18:52.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "regulatory_kb.txt",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\regulatory_kb.txt",
+              "RelativeDocumentMoniker": "regulatory_kb.txt",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\regulatory_kb.txt",
+              "RelativeToolTip": "regulatory_kb.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-09T15:19:10.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "aiApi.js",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\services\\aiApi.js",
+              "RelativeDocumentMoniker": "frontend\\src\\services\\aiApi.js",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\services\\aiApi.js",
+              "RelativeToolTip": "frontend\\src\\services\\aiApi.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-09T20:11:36.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "List.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\List.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\pages\\List.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\List.jsx",
+              "RelativeToolTip": "frontend\\src\\pages\\List.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T18:54:13.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditRegulatoryChangeForm.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\EditRegulatoryChangeForm.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\pages\\EditRegulatoryChangeForm.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\EditRegulatoryChangeForm.jsx",
+              "RelativeToolTip": "frontend\\src\\pages\\EditRegulatoryChangeForm.jsx",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAwHwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T18:45:27.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegulatoryChangeController.java",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\java\\com\\internship\\tool\\controller\\RegulatoryChangeController.java",
+              "RelativeDocumentMoniker": "backend\\src\\main\\java\\com\\internship\\tool\\controller\\RegulatoryChangeController.java",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\java\\com\\internship\\tool\\controller\\RegulatoryChangeController.java",
+              "RelativeToolTip": "backend\\src\\main\\java\\com\\internship\\tool\\controller\\RegulatoryChangeController.java",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2026-05-09T18:05:27.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\App.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\App.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\App.jsx",
+              "RelativeToolTip": "frontend\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T17:39:38.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Tool-13_Regulatory_Change_Management.pdf",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\Tool-13_Regulatory_Change_Management.pdf",
+              "RelativeDocumentMoniker": "Tool-13_Regulatory_Change_Management.pdf",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\Tool-13_Regulatory_Change_Management.pdf",
+              "RelativeToolTip": "Tool-13_Regulatory_Change_Management.pdf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T19:22:12.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Detail.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Detail.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\pages\\Detail.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Detail.jsx",
+              "RelativeToolTip": "frontend\\src\\pages\\Detail.jsx",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwBQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T18:02:01.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Form.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\pages\\Form.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Form.jsx",
+              "RelativeToolTip": "frontend\\src\\pages\\Form.jsx",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAwH4AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T18:01:19.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Layout.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\components\\Layout.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\components\\Layout.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\components\\Layout.jsx",
+              "RelativeToolTip": "frontend\\src\\components\\Layout.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T17:46:10.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "vite.config.js",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\vite.config.js",
+              "RelativeDocumentMoniker": "frontend\\vite.config.js",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\vite.config.js",
+              "RelativeToolTip": "frontend\\vite.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-09T17:30:22.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Login.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\pages\\Login.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Login.jsx",
+              "RelativeToolTip": "frontend\\src\\pages\\Login.jsx",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T17:25:08.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "nginx.conf",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\nginx.conf",
+              "RelativeDocumentMoniker": "frontend\\nginx.conf",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\nginx.conf",
+              "RelativeToolTip": "frontend\\nginx.conf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T17:30:16.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\Dockerfile",
+              "RelativeDocumentMoniker": "backend\\Dockerfile",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\Dockerfile",
+              "RelativeToolTip": "backend\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T17:29:25.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": ".env.example",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\.env.example",
+              "RelativeDocumentMoniker": ".env.example",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\.env.example",
+              "RelativeToolTip": ".env.example",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAhwB0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T17:29:23.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dashboard.jsx",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Dashboard.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\pages\\Dashboard.jsx",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\src\\pages\\Dashboard.jsx",
+              "RelativeToolTip": "frontend\\src\\pages\\Dashboard.jsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-09T17:18:26.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\Dockerfile",
+              "RelativeDocumentMoniker": "frontend\\Dockerfile",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\frontend\\Dockerfile",
+              "RelativeToolTip": "frontend\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T17:28:37.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "V3__users.sql",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\resources\\db\\migration\\V3__users.sql",
+              "RelativeDocumentMoniker": "backend\\src\\main\\resources\\db\\migration\\V3__users.sql",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\resources\\db\\migration\\V3__users.sql",
+              "RelativeToolTip": "backend\\src\\main\\resources\\db\\migration\\V3__users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-09T17:20:33.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "application.yml",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\resources\\application.yml",
+              "RelativeDocumentMoniker": "backend\\src\\main\\resources\\application.yml",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\backend\\src\\main\\resources\\application.yml",
+              "RelativeToolTip": "backend\\src\\main\\resources\\application.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-05-09T17:14:24.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwCYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-05-09T17:13:30.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "generate_report.py",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\generate_report.py",
+              "RelativeDocumentMoniker": "ai-service\\routes\\generate_report.py",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\generate_report.py",
+              "RelativeToolTip": "ai-service\\routes\\generate_report.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-05-07T21:21:14.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "generate_report.txt",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\prompts\\generate_report.txt",
+              "RelativeDocumentMoniker": "ai-service\\prompts\\generate_report.txt",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\prompts\\generate_report.txt",
+              "RelativeToolTip": "ai-service\\prompts\\generate_report.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-07T21:21:10.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "categorise.py",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\categorise.py",
+              "RelativeDocumentMoniker": "ai-service\\routes\\categorise.py",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\routes\\categorise.py",
+              "RelativeToolTip": "ai-service\\routes\\categorise.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-05-07T21:20:44.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "categorise.txt",
+              "DocumentMoniker": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\prompts\\categorise.txt",
+              "RelativeDocumentMoniker": "ai-service\\prompts\\categorise.txt",
+              "ToolTip": "D:\\pranathi\\projects\\campus pe\\regulatory-change-management\\ai-service\\prompts\\categorise.txt",
+              "RelativeToolTip": "ai-service\\prompts\\categorise.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-07T21:20:19.625Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

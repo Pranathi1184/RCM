@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AuthController.class);
 
     private final AuthenticationManager authenticationManager;
     private final CustomUserDetailsService userDetailsService;
@@ -39,13 +40,25 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest request) {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+
+        log.info("Login attempt for email: {}", request.getEmail());
+        
+        User user = userRepository.findByEmail(request.getEmail()).orElse(null);
+            log.info("Authentication successful for email: {}, password: {}", request.getEmail(), request.getPassword());
+        if (user == null) {
+            log.warn("Authentication failed for email: {}. Reason: user not found", request.getEmail());
+            return ResponseEntity.status(401).body(AuthResponse.builder().token(null).role(null).build());
+        }
+        if (!request.getPassword().equals(user.getPassword())) {
+            log.warn("Authentication failed for email: {}. Reason: plain password mismatch", request.getEmail());
+            return ResponseEntity.status(401).body(AuthResponse.builder().token(null).role(null).build());
+        }
+        log.info("Authentication successful for email: {} (plain text mode)", request.getEmail());
 
         final UserDetails userDetails = userDetailsService.loadUserByUsername(request.getEmail());
         final String jwt = jwtUtil.generateToken(userDetails);
 
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
+        
 
         return ResponseEntity.ok(AuthResponse.builder()
                 .token(jwt)
