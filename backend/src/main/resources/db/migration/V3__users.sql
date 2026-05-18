@@ -7,8 +7,14 @@ CREATE TABLE users (
 );
 
 -- Seed an initial admin user (password is 'admin123' hashed with BCrypt)
+--INSERT INTO users (email, password, role) 
+--VALUES 
+--('admin@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'ADMIN'),
+--('manager@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'MANAGER'),
+--('viewer@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'VIEWER');
+
 INSERT INTO users (email, password, role) 
 VALUES 
-('admin@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'ADMIN'),
-('manager@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'MANAGER'),
-('viewer@example.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOn2', 'VIEWER');
+('admin@example.com', 'admin123', 'ADMIN'),
+('manager@example.com', 'admin123', 'MANAGER'),
+('viewer@example.com', 'admin123', 'VIEWER');

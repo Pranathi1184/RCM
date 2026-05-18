@@ -24,7 +24,16 @@ public class RegulatoryChangeController {
     public RegulatoryChangeController(RegulatoryChangeService service) {
         this.service = service;
     }
-
+    @PreAuthorize("hasAnyRole('VIEWER', 'MANAGER', 'ADMIN')")
+    @GetMapping("/{id}")
+    public ResponseEntity<RegulatoryChange> getChange(@PathVariable Long id) {
+        RegulatoryChange change = service.getChangeById(id);
+        if (change == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(change);
+    }
+    
     @PreAuthorize("hasAnyRole('MANAGER', 'ADMIN')")
     @PostMapping
     public ResponseEntity<RegulatoryChange> createChange(@Valid @RequestBody RegulatoryChange newChange) {
@@ -34,6 +43,14 @@ public class RegulatoryChangeController {
     @PreAuthorize("hasAnyRole('MANAGER', 'ADMIN')")
     @PutMapping("/{id}")
     public ResponseEntity<RegulatoryChange> updateChange(
+            @PathVariable Long id, 
+            @Valid @RequestBody RegulatoryChange updateData) {
+        return ResponseEntity.ok(service.updateChange(id, updateData));
+    }
+
+     @PreAuthorize("hasAnyRole('MANAGER', 'ADMIN')")
+    @PutMapping("/{id}/edit")
+    public ResponseEntity<RegulatoryChange> updateChanges(
             @PathVariable Long id, 
             @Valid @RequestBody RegulatoryChange updateData) {
         return ResponseEntity.ok(service.updateChange(id, updateData));

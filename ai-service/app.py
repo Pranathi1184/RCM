@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from routes.categorise import categorise_bp
 from routes.query import query_bp
 from routes.health import health_bp
@@ -10,6 +11,7 @@ from services.limiter import limiter
 
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
 
 # Register Middleware
 app.before_request(sanitize_request)

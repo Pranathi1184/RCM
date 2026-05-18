@@ -6,7 +6,7 @@ export default function List() {
   const [changes, setChanges] = useState([]);
 
   useEffect(() => {
-    api.get("/changes").then(({ data }) => {
+      api.get("/api/changes", { params: { page: 0, size: 1000 } }).then(({ data }) => {
       // Handle Spring Data Page response or direct array
       setChanges(data.content || data);
     });

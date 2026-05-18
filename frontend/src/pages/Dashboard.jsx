@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
+import aiApi from "../services/aiApi";
 
 export default function Dashboard() {
   const [stats, setStats] = useState({ total: 0, pending: 0, byStatus: {}, byPriority: {} });
@@ -9,7 +10,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    api.get("/changes/stats").then(({ data }) => {
+    api.get("/api/changes/stats").then(({ data }) => {
       setStats({
         total: data.totalActive || 0,
         pending: (data.byStatus?.DRAFT || 0) + (data.byStatus?.SUBMITTED || 0),
@@ -18,7 +19,7 @@ export default function Dashboard() {
       });
     }).catch(() => {
       // fallback if stats endpoint fails
-      api.get("/changes").then(({ data }) => {
+      api.get("/api/changes").then(({ data }) => {
         const items = data.content || data;
         setStats(prev => ({ ...prev, total: items.length }));
       });
@@ -94,7 +95,11 @@ export default function Dashboard() {
                 <div className="text-xs font-bold text-purple-700 uppercase tracking-wider mb-1">Sources:</div>
                 <div className="flex flex-wrap gap-2">
                   {queryResult.sources.map((src, i) => (
-                    <span key={i} className="text-xs bg-white px-2 py-1 rounded border border-purple-200 text-purple-600">{src}</span>
+                      <span key={i} className="text-xs bg-white px-2 py-1 rounded border border-purple-200 text-purple-600">
+                          {typeof src === "string"
+                              ? src
+                              : src.content || JSON.stringify(src)}
+                      </span>
                   ))}
                 </div>
               </div>

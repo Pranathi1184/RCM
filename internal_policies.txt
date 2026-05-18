@@ -1,0 +1,26 @@
+# Internal Company Policies (v2.0)
+
+## 1. Data Retention Policy
+- Financial records must be retained for a minimum of 7 years.
+- Customer personal data (PII) must be deleted within 30 days of account closure, unless required for legal holds.
+- Internal communication logs are archived for 1 year.
+
+## 2. Password and Access Security
+- Passwords must be changed every 90 days.
+- Multi-Factor Authentication (MFA) is mandatory for all internal systems.
+- Access reviews are conducted quarterly by department heads.
+
+## 3. Remote Work Policy
+- Employees must use company-provided VPN for accessing internal tools.
+- Public Wi-Fi is prohibited for handling sensitive client data.
+- Hard drives on all company laptops must be encrypted.
+
+## 4. AI Usage Policy
+- All AI models used for decision-making must be reviewed by the Ethics Committee.
+- Customer data must be anonymized before being used for training or external API calls.
+- AI-generated reports must be verified by a human before being sent to regulators.
+
+## 5. Travel and Expense
+- All business travel requires prior approval from the manager.
+- Receipts must be submitted within 15 days of the expense date.
+- Economy class is standard for flights under 6 hours.

@@ -11,7 +11,8 @@ import os
 
 class ChromaService:
     def __init__(self):
-        self.persist_directory = os.path.join(os.getcwd(), "chroma_data")
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+        self.persist_directory = os.path.join(project_root, "chroma_data")
 
         self.client = chromadb.PersistentClient(path=self.persist_directory)
 

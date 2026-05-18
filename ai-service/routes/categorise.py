@@ -8,7 +8,8 @@ from services.cache_service import get_cache, set_cache
 import os
 
 def load_prompt(filename, **kwargs):
-    path = os.path.join("ai-service", "prompts", filename)
+    prompts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "prompts"))
+    path = os.path.join(prompts_dir, filename)
     with open(path, "r") as f:
         template = f.read()
     return template.format(**kwargs)
@@ -57,9 +58,8 @@ def categorise():
             }
         })
     
-    prompt = load_prompt("categorise.txt", text=user_text)
-
     try:
+        prompt = load_prompt("categorise.txt", text=user_text)
         start = time.time()
         ai_result = client.generate(prompt)
         end = time.time()

@@ -13,17 +13,18 @@ def test_chroma():
 ]
 
     test_metadatas = [
-        {"source": "doc1", "topic": "rcm"},
-        {"source": "doc2", "topic": "compliance"},
-        {"source": "doc3", "topic": "risk"}
+        {"source": "doc1", "topic": "compliance"},
+        {"source": "doc2", "topic": "regulatory change management"},
+        {"source": "doc3", "topic": "compliance"},
+        {"source": "doc4", "topic": "risk"}
     ]
 
-    test_ids = ["id1", "id2", "id3"]
+    test_ids = ["id1", "id2", "id3", "id4" ]
 
     print("Adding test documents...")
     service.add_documents(test_docs, test_metadatas, test_ids)
 
-    query = "How do compliance officers monitor updates?"
+    query = "What is Compliance?"
     print(f"Querying: '{query}'")
 
     results = service.query(query, n_results=1)

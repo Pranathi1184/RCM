@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "77f37e4c-161b-426c-9418-7f9e83f7b23c",
+		"name": "Regulatory AI API",
+		"description": "Collection for testing Regulatory Change Management AI Service endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorise Text",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"The RBI issued a new cybersecurity compliance circular for financial institutions.\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/categorise",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categorise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Describe Change",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"SEBI updated disclosure requirements for listed companies.\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/describe",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"describe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recommendations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"A new privacy regulation requires stronger consent tracking.\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/recommend",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Knowledge Base",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"question\": \"How do compliance officers monitor updates?\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/query",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"Summarize the impact of new AML monitoring obligations on current compliance workflows.\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/generate-report",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"generate-report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Report Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/report-status/{{job_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"report-status",
+						"{{job_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		},
+		{
+			"key": "job_id",
+			"value": "replace-with-job-id-from-generate-report",
+			"type": "string"
+		}
+	]
+}
