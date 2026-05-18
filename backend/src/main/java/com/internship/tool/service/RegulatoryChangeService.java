@@ -71,6 +71,18 @@ public class RegulatoryChangeService {
 
     public RegulatoryChange createChange(RegulatoryChange newChange) {
         newChange.setIsDeleted(false);
+        if (newChange.getCategory() == null || newChange.getCategory().trim().isEmpty()) {
+            String text = (newChange.getTitle() != null ? newChange.getTitle() : "") + " " +
+                          (newChange.getDescription() != null ? newChange.getDescription() : "") + " " +
+                          (newChange.getRegulatoryBody() != null ? newChange.getRegulatoryBody() : "");
+            AiServiceClient.AiResponse catRes = aiServiceClient.categorise(text.trim());
+            if (catRes != null && catRes.getData() != null && catRes.getData().get("data") instanceof Map dataMap) {
+                Object cat = dataMap.get("category");
+                if (cat instanceof String s && !s.isEmpty()) {
+                    newChange.setCategory(s);
+                }
+            }
+        }
         return repository.save(newChange);
     }
 
@@ -83,8 +95,22 @@ public class RegulatoryChangeService {
             existing.setTitle(updateData.getTitle());
         if (updateData.getDescription() != null)
             existing.setDescription(updateData.getDescription());
-        if (updateData.getCategory() != null)
+        if (updateData.getCategory() != null) {
             existing.setCategory(updateData.getCategory());
+        } else if ((existing.getCategory() == null || existing.getCategory().trim().isEmpty()) &&
+                   (updateData.getTitle() != null || updateData.getDescription() != null || updateData.getRegulatoryBody() != null)) {
+            // If category is still missing, try to get from AI
+            String text = (updateData.getTitle() != null ? updateData.getTitle() : existing.getTitle()) + " " +
+                          (updateData.getDescription() != null ? updateData.getDescription() : existing.getDescription()) + " " +
+                          (updateData.getRegulatoryBody() != null ? updateData.getRegulatoryBody() : existing.getRegulatoryBody());
+            AiServiceClient.AiResponse catRes = aiServiceClient.categorise(text.trim());
+            if (catRes != null && catRes.getData() != null && catRes.getData().get("data") instanceof Map dataMap) {
+                Object cat = dataMap.get("category");
+                if (cat instanceof String s && !s.isEmpty()) {
+                    existing.setCategory(s);
+                }
+            }
+        }
         if (updateData.getRegulatoryBody() != null)
             existing.setRegulatoryBody(updateData.getRegulatoryBody());
         if (updateData.getStatus() != null)

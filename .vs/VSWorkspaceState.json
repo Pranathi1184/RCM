@@ -1,8 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ai-service",
-    "\\ai-service\\routes",
     "\\backend",
     "\\backend\\src",
     "\\backend\\src\\main",
@@ -10,8 +8,11 @@
     "\\backend\\src\\main\\java\\com",
     "\\backend\\src\\main\\java\\com\\internship",
     "\\backend\\src\\main\\java\\com\\internship\\tool",
-    "\\backend\\src\\main\\java\\com\\internship\\tool\\controller"
+    "\\backend\\src\\main\\java\\com\\internship\\tool\\entity",
+    "\\frontend",
+    "\\frontend\\src",
+    "\\frontend\\src\\pages"
   ],
-  "SelectedNode": "\\ai-service\\ingest_docs.py",
+  "SelectedNode": "\\backend\\src\\main\\java\\com\\internship\\tool\\DataLoader.java",
   "PreviewInSolutionExplorer": false
 }

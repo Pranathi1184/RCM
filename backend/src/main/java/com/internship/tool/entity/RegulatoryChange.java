@@ -35,8 +35,7 @@ public class RegulatoryChange {
     @Column(name = "regulatory_body", nullable = false)
     private String regulatoryBody;
 
-    @NotBlank(message = "Category is required")
-    @Column(nullable = false, length = 100)
+    @Column(length = 100)
     private String category;
 
     @NotNull(message = "Status cannot be null")
